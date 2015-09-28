@@ -10,7 +10,7 @@ module S3FileField
         bucket: S3FileField.config.bucket,
         acl: S3FileField.config.acl || "public-read",
         expiration: S3FileField.config.expiration || 10.hours.from_now.utc.iso8601,
-        max_file_size: S3FileField.config.max_file_size || 500.megabytes,
+        max_file_size: 50.gigabytes,
         conditions: S3FileField.config.conditions || [],
         key_starts_with: S3FileField.config.key_starts_with || 'uploads/',
         region: S3FileField.config.region || 's3',
